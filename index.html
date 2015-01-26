@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Phone Cover Glass Scratch Test</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Smart Phone Cover Glass Scratch Test">
+  <meta name="author" content="Jun Xie, Data Scientist">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Smart Phone Cover Glass Scratch Test</h1>
+    <h2>A Shiny App for Accurate Data Reporting and Reproducible Statistical Analysis</h2>
+    <p>Jun Xie, Data Scientist<br/>Touch Panel Product Engineering</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Scratch damage of smart phone cover glass is one of the major issues for both users and vendors. </li>
+<li>Novel materials are under development to improve anti-scratch performance. Scratch tests being conducted in various locales around the world generate constant streams of data. </li>
+<li>A shiny app is being developed in order to record scratch-test data accurately along with test conditions and provide statistical data analysis instantly to guide R&amp;D efforts. </li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>The user interface consists of two parts</h3>
+
+<ol>
+<li>A Sidebar panel for recording tests conditions and taking other user inputs. </li>
+<li>A Main panal with multiple tabs that display data plots or analysis results.</li>
+</ol>
+
+<p><img src = "scratchtest_app_small.jpg" width=500></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data Analysis</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Data analysis results are reported under the &quot;Summary&quot; tab.</h3>
+
+<p>At present the app only performs simple statiscal data analysis, reporting the results under the &quot;Summary&quot; tab. With additional develpment time, advanced analysis features will be incorporated.</p>
+
+<pre><code>## $`1`
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   49.03   55.55   59.86   61.17   66.65   78.39 
+## 
+## $`2`
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   46.22   55.60   60.34   60.59   64.03   87.92 
+## 
+## $`3`
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   38.65   52.22   59.04   58.63   65.87   79.01
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Future Development</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Plan to incorporate advanced features such as</h3>
+
+<ol>
+<li>Bootstrapping to study noisy data sets</li>
+<li>Unsupervised learning to provide better understanding of test performance</li>
+<li>Anormaly detection to support high-volume production</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Shiny App'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data Analysis'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Future Development'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

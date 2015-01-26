@@ -1,0 +1,59 @@
+---
+title       : Smart Phone Cover Glass Scratch Test
+subtitle    : A Shiny App for Accurate Data Reporting and Reproducible Statistical Analysis
+author      : Jun Xie, Data Scientist
+job         : Touch Panel Product Engineering
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Motivation
+
+1. Scratch damage of smart phone cover glass is one of the major issues for both users and vendors. 
+2. Novel materials are under development to improve anti-scratch performance. Scratch tests being conducted in various locales around the world generate constant streams of data. 
+3. A shiny app is being developed in order to record scratch-test data accurately along with test conditions and provide statistical data analysis instantly to guide R&D efforts. 
+
+--- .class #id 
+
+## Shiny App
+### The user interface consists of two parts 
+
+1. A Sidebar panel for recording tests conditions and taking other user inputs. 
+2. A Main panal with multiple tabs that display data plots or analysis results.
+
+
+<img src = "scratchtest_app_small.jpg" width=500>
+
+--- .class #id
+
+## Data Analysis
+### Data analysis results are reported under the "Summary" tab.
+
+At present the app only performs simple statiscal data analysis, reporting the results under the "Summary" tab. With additional develpment time, advanced analysis features will be incorporated.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Generate simulated scratch test data
+sample <- 3
+test <- 50
+test_sample <- gl(sample, test)   ## factor variables 50 levels, 10 elements
+mean <- 60
+sd <- 8
+Cycles_to_Scratch <- rnorm(sample*test, mean, sd)
+cts_data <- cbind(Cycles_to_Scratch, test_sample)
+
+# Simple data analysis
+tapply(Cycles_to_Scratch, test_sample, summary)
+```
+
+--- .class #id
+
+## Future Development
+### Plan to incorporate advanced features such as
+
+1. Bootstrapping to study noisy data sets
+2. Unsupervised learning to provide better understanding of test performance
+3. Anormaly detection to support high-volume production
